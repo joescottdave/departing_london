@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>From (red) to London</title>
+    </head>
+    <body>
+    <script src="./js/d3.js" charset="utf-8"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.min.js"></script>
+    <script>
+        var width = 960,
+            height = 1160;
+
+        var svg = d3.select('body').append('svg')
+                    .attr('width', width)
+                    .attr('height', height);
+
+        var color = d3.scaleLinear()
+            .domain([0,1700])
+            .range(['#fff', '#ff0000']);
+        
+        queue()
+            .defer(d3.json, './json/topo_lad.json')
+            .defer(d3.csv, './data/departures.csv')
+            .await(function(error, uk, change){
+                var lad = topojson.feature(uk, uk.objects.lad);
+                var projection = d3.geoAlbers()
+                    .rotate([0,0])
+                    .scale(5000)
+                    .translate([700, 1900]);
+
+                var path = d3.geoPath()
+                        .projection(projection);
+
+                svg.selectAll('.lad')
+                    .data(lad.features)
+                .enter().append('path')
+                    .attr('class', function(d) { return 'lad ' + d.id; })
+                    .attr('d', path)
+                    .attr('fill', '#e7e7e7');
+
+                var length = change.length
+
+                for(i=0; i<length; i++){
+                    var x = change[i].code;
+                    var net = change[i].number;
+                    var area = d3.select('.' + x)
+                            .datum(net);
+                    area.attr('fill', function(d,i){
+                        console.log(d)
+                        return color(d);
+                    });
+                }    
+            });
+
+        // d3.json('./json/topo_lad.json', function(error, uk){
+        //     if (error) return console.error(error);
+            
+        //     var lad = topojson.feature(uk, uk.objects.lad);
+        //     var projection = d3.geoAlbers()
+        //         .rotate([0,0])
+        //         .scale(5000)
+        //         .translate([700, 1900]);
+
+        //     var path = d3.geoPath()
+        //             .projection(projection);
+
+        //     svg.selectAll('.lad')
+        //         .data(lad.features)
+        //     .enter().append('path')
+        //         .attr('class', function(d) { return 'lad ' + d.id; })
+        //         .attr('d', path);
+        // });
+    </script>
+    </body>
+</html>

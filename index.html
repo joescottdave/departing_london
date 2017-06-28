@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Joseph Scott Davies" />
+        <title>Departing London</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+        <style>
+            *{
+                font-family: 'Open Sans', 'Arial', sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            h1{
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            div.banner-image{
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .box{
+                margin: 1px;
+                border: 0.5px solid black;
+            }
+
+            div#container {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+
+            div.main-column{
+                flex: auto;
+            }
+
+            div.article-image img{
+                display: block;
+            }
+
+            img, svg{
+                width: 320px;
+                display: block;
+            }
+
+            svg{
+                width: 320px;
+                height: 125px;
+            }
+
+            div.meta-container{
+                border-top: 1px #e7e7e7 solid;
+                border-bottom: 1px #e7e7e7 solid;
+                padding: 10px 0;
+            }
+            div.meta-container ul{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                
+            }
+
+            div.meta-container ul li{
+                display:inline;
+                font-size: 22px;
+            }
+
+            .highlight{
+                color: rgb(93,93,255);
+             }
+
+             .redlight{
+                 color: rgb(255,93,93);
+             }
+
+             .lowlight{
+                 color: #727272;
+             }
+
+            div.meta-container p.byline{
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+
+            div.meta-container p.timestamp, div.article-image span{
+                margin-top: 0;
+                font-size: 12px;
+                line-height: 12px;
+            }
+
+            table{
+                border: 0.5px #d7d7d7 solid;
+                margin: 3px auto;
+                width: 300px;
+            }
+
+            table.regions-table tr{
+                width:100%;
+            }
+
+            th{
+                font-weight: 600;
+            }
+
+            th, td{
+                text-align: left;
+                width: 45%;
+            }
+
+            th:first-of-type, td:first-of-type{
+                width: 10%;
+            }
+
+            img#footer-image{
+                width: 320px;
+            }
+
+            @media screen and (min-width: 400px){
+                div#container{
+                    width: 100%;
+                    max-width: 640px;
+                }
+
+                div.article-image{
+                    margin: auto;
+                    padding: 5px;
+                    width: 400px;
+                }
+
+                div.article-image img, div.article-image svg{
+                    width: 400px;
+                }
+
+                table{
+                    width: 400px;
+                }
+
+                img#footer-image{
+                    width: 100%;
+                    max-width: 640px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="main-column">
+                <div class="banner-image">
+                </div>
+                <div class="headline">
+                    <h1>Departing London</h1>
+                    <p class="lowlight">More and more people are moving out of London.  Where are they going, and why are they leaving?</p>
+                </div>
+                <div class="meta-container">
+                    <ul>
+                        <li>🚂</li>
+                        <li>🛫</li>
+                        <li>🚗</li>
+                    <ul>
+                    <p class="byline highlight">C1554527</p>
+                    <p class="timestamp lowlight">Tuesday 27 June 2007 08:55 BST</p>
+                </div>
+                <article>
+                    <p>If you are thinking of leaving London, you are not alone. </p>
+                    <p>Recently published internal migration figures from the Office for National Statistics show that more people are moving out of London than moving into the capital, and it is the only region of the UK currently experiencing this outflow.</p>
+                    <p>The figures show the movement of people already living in the UK from one part of the country to another.  For the sixth year running: more UK-based people are moving out of London than moving in, and it is the city’s young cohort who make up the majority of those leaving.</p>
+                    <div class="article-image">
+                        <svg id="age-vis"></svg>
+                        <span>62% of those leaving London are below the age of 36</br>while 8% are over 65</span>
+                    </div>
+                    <p>Retirement aged people who make up over a fifth of the UK’s population are perhaps more stable and settled than other sections of the population. Over 65s account for only 10% of the moves in the data and only 8% of those leaving the capital.</p>
+                    <p>More likely to own their homes and not affected by government policies like the ‘Benefit Cap’, older people are perhaps more immune to the cost pressures of living in London.  Rents there are reported to have reached two-thirds of average income.  With inflation squeezing ever-decreasing disposable incomes, the declining quality of life for renters has become too much to bear.</p>
+                    <p>London is still a huge draw for young adults.  Much of the UK’s internal migration is down to students leaving home for university.  More people aged 18-35 are moving into London than moving out.</p>
+                    <p>Adults past the age of 35 and children under 18 show much larger numbers leaving than entering, suggesting that those with, or hoping to start, families are choosing to make their homes elsewhere.</p>
+                    <div class="article-image">
+                        <img src="./img/chart.png" alt="a chart showing the breakdown of those leaving and entering by age category" />
+                        <span class="lowlight">There is still a net influx of young adults</span>
+                    </div>
+                    <p>Nick is a 30 year-old newly qualified architect who has lived in London for five years, but having found the job that he was looking for, he is not happy with his financial prospects, his work/life balance, or the effect it has on his social life.  While his friends in other parts of the country are settling into relationships, buying homes, and starting families, he sees no prospect of these things for himself in London and has been contemplating leaving.</p>
+                    <p>If Nick does not make the move in the next five years, the data suggests it will become that much more likely after that.  His own experiences are a strong reflection of the data.</p>
+                    <p>“Few people stay because of the cost of living and issues with raising a family.  And everyone is talking about Birmingham as the place to be.”</p>
+                    <p>Birmingham and Brighton top the list of destinations for people leaving London with cities, Manchester and Bristol, figuring in the top 10.  Canterbury rounds out the top 5 city destinations for anyone departing London followed by Leeds (6th) and Leicester (7th)</p>
+                    <table class="cities-table">
+                        <thead>
+                            <th class="lowlight">#</th><th class="highlight">City</th><th class="redlight">People</th>
+                        </thead>
+                        <tr>
+                            <td>1.</td><td>Birmingham</td><td>2,193</td>
+                        </tr>
+                        <tr>
+                            <td>2</td><td>Brighton</td><td>1,922</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td><td>Manchester</td><td>1,673</td>
+                        </tr>
+                        <tr>
+                            <td>4.</td><td>Bristol</td><td>1,501</td>
+                        </tr>
+                        <tr>
+                            <td>5.</td><td>Canterbury</td><td>1,403</td>
+                        </tr>
+                    </table>
+                    <p>For those swapping one city for another: the nation’s second largest city Birmingham makes an obvious choice, but Brighton is an unlikely runner-up.  With a population of roughly 156,000 people, the city is an order of magnitude smaller than London and Birmingham with their seven-figure populations.</p>
+                    <p>These figures suggest that people are not put-off by city life, but by London specifically, and are choosing to live in cheaper cities elsewhere.</p>
+                    <p>Asked where he might move to, Nick suggests ‘Brighton or Kent/Essex’.  The appeal of the former is its liberal, cosmopolitan vibe.  Suggests young Londoners feel they might better fit in with the culture there.</p>
+                    <p>Robert, also 30 and working in the Civil Service, left London in 2013, citing loneliness that proved detrimental to his mental health.  After an hour long commute to and from work each day he had little time and energy for socialising.  He worked for the minimum wage at that time and relied on housing benefit to meet his rent.  He returned to his hometown in Wales.</p>
+                    <p>Regionally, Wales attracts more Londoners than Scotland and Northern Ireland combined.  Figures for Scotland and Northern Ireland are not broken down by local authority as they are for England and Wales.</p>
+                    <table class="regions-table">
+                        <thead>
+                            <th class="lowlight">#</th><th class="highlight">Region</th><th class="redlight">People</th>
+                        </thead>
+                        <tr>
+                            <td>1.</td><td>Wales</td><td>4,218</td>
+                        </tr>
+                        <tr>
+                            <td>2</td><td>Scotland</td><td>2,635</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td><td>Northern Ireland</td><td>968</td>
+                        </tr>
+                    </table>                    
+                    <p>36 of 350 areas buck the trend and show net contributions of people to London.  Eight of these are in Wales.  The highest contributions come from Middlesbrough (+81) and Newcastle upon Tyne (+63).</p>
+                    <div class="article-image">
+                        <img src="./img/map_of_net_changes.png" alt="A map of Great Britain showing net balance in and out of London from each Local Authority" width="320px" />
+                        <span class="lowlight">Red areas saw a net loss of people to London</span>
+                    </div>
+                    <p>London accounts for over a fifth of the UK’s GDP and a similar share of all UK employment.  If UK residents are turning away even as the capital continues to grow through international migration, does it mean a narrowing of opportunities?</p>
+                    <p>It should perhaps worry political figures that the UK capital hoards high-paying jobs that are nevertheless unsustainable under growing cost pressures like housing.</p>
+                    <p>The increasing rootlessness of those in London - Theresa May’s “citizens of nowhere” -  is contributing to a growing sense of detachment from the rest of the UK.  A detachment cited by even politically neutral figures like Mark Carney, Governor of the Bank of England.  London was the only region of England to vote to remain in the EU in 2016’s divisive referendum.</p>
+                    <p>Young adults come for the prestigious work and education opportunities in London’s world famous institutions across culture, finance, law, politics and others.  Increasingly, it seems, as mature adults they do not like what they find.</p>
+                    <div class="sub-meta">
+                    <img id="footer-image" src="./img/london-skyline.svg" alt="a silhouette of the London skyline" />
+                    <!-- image found http://www.clker.com/cliparts/Z/u/s/h/h/c/london-skyline.svg -->
+                </div>
+            </div> 
+        </div>
+        <script src="./js/d3.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.min.js"></script>
+        <script>
+            var blueToRed = d3.scaleLinear()
+                            .domain([-2800, -780, 0, 85])
+                            .range(['#000', '#0000ff', '#fff', '#ff0000']);
+
+            function csvFun(){
+                d3.csv('./data/net-change.csv', function(error, data){
+                    if (error) throw error;
+
+                    var vis = d3.select('.banner-image');
+
+                    var boxes = vis.selectAll('.box')
+                                    .data(data);
+                    
+                    boxes.attr('background-color', 'red');
+                    
+                    boxes.enter()
+                        .append('div')
+                        .attr('class','box')
+                        .attr('id', function(d){ return d.lad_code; })
+                        .attr('data-key', function(d){ return d.net; })
+                        .style('height', '15px')
+                        .style('width', '15px')
+                        .style('background-color', function(d){
+                            var x = parseInt(d.Net)
+                            return blueToRed(x);
+                         });
+
+                    boxes.exit().remove();
+                })                
+            }
+
+            function drawAge(){
+                var things = [75, 3, 4,5,6,7,8,9];
+
+                width = document.getElementById("age-vis")
+                            .clientWidth;
+
+                var g = d3.select("#age-vis")
+                            .append("g");
+
+                var circles = g.selectAll(".circles").data([44.42, 15.96]);
+                
+                var pi = Math.pi;
+                console.log(pi);
+                circles.enter()
+                    .append("circle")
+                    .attr("class","circles")
+                    .attr("r", function(d,i){ return d; })
+                    .attr("cx", function(d,i){ return d + (i*100); })
+                    .attr("cy",function(d,i){ return d + (i*50) + 10; })
+                    .attr('fill', function(d,i){
+                        if(i==0){ return 'rgb(255,93,93)' }else{ return 'rgb(93,93,255)'};
+                    });
+
+                var text = g.selectAll('.label').data(['35 and under', 'Retirement age']);
+                text.enter()
+                    .append('text')
+                    .text(function(d){ return d; })
+                    .attr('fill', function(d,i){
+                        if(i==0){ return 'rgb(255,93,93)'}else{ return 'rgb(93,93,255)'}
+                    })
+                    .attr('x', function(d,i){
+                        if(i==0){ return 92 ; } else { return 135; }
+                    })
+                    .attr('y', function(d,i){
+                        if(i==0){ return 45; } else { return 82; }
+                    } );
+                
+                var percent = g.selectAll('.percent')
+                                .data([{'text': '62%', 'x': 28, 'y': 61, 'fontSize': 20}, {'text':'8%', 'x': 106, 'y': 81, 'fontSize': 14} ]);
+                
+                percent.enter()
+                    .append('text')
+                    .attr('class', 'percent')
+                    .text(function(d){ return d.text; })
+                    .attr('fill', 'white')
+                    .attr('x', function(d){ return d.x; })
+                    .attr('y', function(d){ return d.y; })
+                    .style('font-size', function(d){ return d.fontSize; });
+                
+            }
+
+            drawAge()
+            csvFun()
+        </script>
+    </body>
+</html>
